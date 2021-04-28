@@ -20,15 +20,15 @@ console.log(mailList);
 
 // tentativo 2
 
-var included = 0;
+var included = false;
 
 for (var i = 0; i < mailList.length; i++) {
     if (mailUtente == mailList[i]) {
-        included = 1;
+        included = true;
     }
 }
 
-if (included == 1) {
+if (included == true) {
     document.getElementById("check").innerHTML = "Alla grande! La mail " + mailUtente + " &egrave; in lista";
 } else {
     document.getElementById("check").innerHTML = "Oh no! Purtroppo per te la mail " + mailUtente + " non &egrave; in lista";
