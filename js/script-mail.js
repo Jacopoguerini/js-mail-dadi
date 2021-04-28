@@ -32,11 +32,11 @@ console.log(mailList);
 
 // tentativo 2
 for (var i = 0; i < mailList.length; i++) {
-    if (mailList[i] === (mailUtente)) {
+    if (mailUtente = mailList[i]) {
         console.log("Mail in lista");
         document.getElementById("message").innerHTML = "Alla grande! La mail " + mailUtente + " &egrave; in lista"
     } else {
         console.log("Mail non in lista");
-        document.getElementById("message").innerHTML = " Oh no! Purtroppo per te la mail " + mailUtente + "non &egrave; in lista"
+        document.getElementById("message").innerHTML = " Oh no! Purtroppo per te la mail " + mailUtente + " non &egrave; in lista"
     }
 }
