@@ -10,33 +10,27 @@ console.log(mailList);
 // controlla lista accessi + esito controllo
 
 // tentativo 1
-/* for (var i = 0; i < mailList.length; i++) {
-    if (mailList.includes(mailUtente)) {
-        console.log("Mail in lista");
-        document.getElementById("message").innerHTML = "Alla grande! La mail " + mailUtente + " &egrave; in lista"
-    } else {
-        console.log("Mail non in lista");
-        document.getElementById("message").innerHTML = " Oh no! Purtroppo per te la mail " + mailUtente + "non &egrave; in lista"
-    }
-} */
-
-// tentativo 1.1
 // if (mailList.includes(mailUtente)) {
 //     console.log("Mail in lista");
-//     document.getElementById("message").innerHTML = "Alla grande! La mail " + mailUtente + " &egrave; in lista"
+//     document.getElementById("check").innerHTML = "Alla grande! La mail " + mailUtente + " &egrave; in lista"
 // } else {
 //     console.log("Mail non in lista");
-//     document.getElementById("message").innerHTML = " Oh no! Purtroppo per te la mail " + mailUtente + "non &egrave; in lista"
+//     document.getElementById("check").innerHTML = "Oh no! Purtroppo per te la mail " + mailUtente + "non &egrave; in lista"
 // }
 
-
 // tentativo 2
+
+var included = 0;
+
 for (var i = 0; i < mailList.length; i++) {
-    if (mailUtente = mailList[i]) {
-        console.log("Mail in lista");
-        document.getElementById("message").innerHTML = "Alla grande! La mail " + mailUtente + " &egrave; in lista"
-    } else {
-        console.log("Mail non in lista");
-        document.getElementById("message").innerHTML = " Oh no! Purtroppo per te la mail " + mailUtente + " non &egrave; in lista"
+    if (mailUtente == mailList[i]) {
+        included = 1;
     }
 }
+
+if (included == 1) {
+    document.getElementById("check").innerHTML = "Alla grande! La mail " + mailUtente + " &egrave; in lista";
+} else {
+    document.getElementById("check").innerHTML = "Oh no! Purtroppo per te la mail " + mailUtente + " non &egrave; in lista";
+}
+
